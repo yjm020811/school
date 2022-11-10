@@ -3,23 +3,28 @@
     <!-- 头部 -->
     <div class="header">
       <img src="../assets/images/logo.png" alt="">
-      <div class="header_title" style="min-width:500px">
-        <el-col class="title1" style="position:relative">学校概况
-          <div class="mask">
-            <el-row>学校介绍&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 领导致辞 </el-row>
-            <el-row>组织机构&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp特色理念</el-row>
-            <el-row>大事记&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp领导关怀</el-row>
-            <el-row>校园环境&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp影像东软</el-row>
-            <el-row>大学环境&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp党群工作</el-row>
-          </div>
-        </el-col>
-        <el-col>学校介绍</el-col>
-        <el-col>新闻中心</el-col>
-        <el-col>招生就业</el-col>
-        <el-col>人才培养</el-col>
-        <el-col>服务指南</el-col>
-        <el-col>友情链接</el-col>
-      </div>
+      <el-menu class="el-menu-demo" mode="horizontal" 
+        background-color="#3a5195" text-color="#fff" >
+        <el-submenu index="1">
+          <template slot="title">学校概况</template>
+          <el-menu-item style="float:left" index="1-1">学校简介</el-menu-item>
+          <el-menu-item style="float:left" index="1-2">领导致辞</el-menu-item><br>
+          <el-menu-item style="float:left" index="1-3">组织机构</el-menu-item>
+          <el-menu-item style="float:left" index="1-4">理念特色</el-menu-item><br>
+          <el-menu-item style="float:left;margin-right: 5px;" index="1-5">大 事 记</el-menu-item>
+          <el-menu-item style="float:left" index="1-6">领导关怀</el-menu-item><br>
+          <el-menu-item style="float:left" index="1-7">校园环境</el-menu-item>
+          <el-menu-item style="float:left" index="1-8">影像东软</el-menu-item><br>
+          <el-menu-item style="float:left" index="1-9">大学精神</el-menu-item>
+          <el-menu-item style="float:left" index="1-10">党群工作</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="2">学院介绍</el-menu-item>
+        <el-menu-item index="3">新闻中心</el-menu-item>
+        <el-menu-item index="4">招生就业</el-menu-item>
+        <el-menu-item index="5">人才培养</el-menu-item>
+        <el-menu-item index="6">服务指南</el-menu-item>
+        <el-menu-item index="7">友情链接</el-menu-item>
+      </el-menu>
     </div>
     <div class="line"></div>
     <!-- 主体 -->
@@ -142,6 +147,10 @@ export default {
   background-color: #3a5195;
 }
 
+ .grid-content {
+   border-radius: 4px;
+   min-height: 36px;
+ }
 img {
   width: 180px;
   height: 60px;
@@ -291,6 +300,8 @@ img {
   padding-top: 100px;
   margin-left: -10px;
 }
+
+
 
 .mask {
   display: none;

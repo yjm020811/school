@@ -50,6 +50,7 @@
           <van-field v-model="comment2" placeholder="评论" />
         </van-cell-group>
       </div>
+      
     </div>
     <!-- 下方导航栏 -->
     <div class="downNav">
