@@ -1,12 +1,12 @@
 <template>
   <div class="bigBox">
-    <!-- 最上方tag -->
-    <div class="tag">
-      <h1>我的求助</h1>
+   
+    <div class="title">
+      <h2>我的求助</h2>
       <van-button icon="replay" color="#fff" plain style="border: none; background-color: #000" />
     </div>
     <!-- 个人信息展示 -->
-    <div class="yourInfamation">
+    <div class="infamation">
       <van-row>
         <van-col span="8">
           <van-image round width="100" height="100" src="https://img01.yzcdn.cn/vant/cat.jpeg" />
@@ -16,15 +16,15 @@
         </van-col>
       </van-row>
     </div>
-    <!-- 提示tag -->
+   
     <div class="more">
       <van-button type="default">您收到2条消息</van-button>
       <van-icon name="comment-o" />
     </div>
     <!-- 朋友圈卡片 -->
     <div class="circle">
-      <div class="one">
-        <p>
+      <div class="first">
+        <p style="font-size: 16px;">
           多么美好的一个雨天呀！下雨天就是一个适合睡觉
           的天气，不睡觉都对不起老天爷赏脸。有什么办法 能让我避开老师睡觉吗？
           <van-icon name="question" />
@@ -34,8 +34,8 @@
           <van-field v-model="comment" placeholder="评论" />
         </van-cell-group>
       </div>
-      <div class="two">
-        <p style="font-size: 20px; font-weight: 550; color: rgb(103, 103, 103)">
+      <div class="second">
+        <p style="font-size: 16px; font-weight: 550; color: rgb(103, 103, 103)">
           我又来啦，哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈啊哈
           哈哈哈哈啊哈哈哈哈，想不到吧。还是上面那个问 题，来人帮帮我。
           <van-icon id="dui" name="checked" />
@@ -78,13 +78,13 @@ export default {
 .bigBox {
   width: 100%;
 
-  .tag {
+  .title {
     position: relative;
     text-align: center;
     background: #000;
     height: 80px;
 
-    h1 {
+    h2 {
       display: inline-block;
       color: #ffff;
       line-height: 80px;
@@ -98,7 +98,7 @@ export default {
   }
 }
 
-.yourInfamation {
+.infamation {
   position: relative;
   background: #000;
   height: 120px;
@@ -161,12 +161,15 @@ export default {
   .van-cell-group {
     border: 2px solid rgb(136, 136, 136);
   }
-
-  .two {
+.first{
+  margin-top: -10px;
+}
+  .second {
     p {
       font-size: 15px;
       font-weight: normal;
       margin: 12px 0;
+      margin-bottom: 10px;
     }
 
     span {
